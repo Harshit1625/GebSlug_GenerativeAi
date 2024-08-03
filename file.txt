@@ -1,0 +1,12 @@
+const aiResponse = await openai.createImage({
+  prompt,
+  n: 3,
+  size: '1024x1024',
+  response_format: 'b64_json'
+});
+
+// Extract the three images from the response
+const images = aiResponse.data.data.map(imageData => imageData.b64_json);
+
+// Now you have an array of three base64-encoded images
+console.log(images);
