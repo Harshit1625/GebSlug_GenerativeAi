@@ -6,7 +6,7 @@ dotenv.config();
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const key: string | undefined = process.env.API_KEY;
+const key = process.env.API_KEY;
 
 const genAI = new GoogleGenerativeAI(key ?? ''); // Default to an empty string if key is null or undefined
 
