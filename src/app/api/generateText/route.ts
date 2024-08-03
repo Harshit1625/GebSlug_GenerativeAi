@@ -6,13 +6,13 @@ dotenv.config();
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const key = process.env.API_KEY;
+const createModel = () => {
+  const key = process.env.API_KEY ?? '';
+  const genAI = new GoogleGenerativeAI(key);
+  return genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+};
 
-const genAI = new GoogleGenerativeAI(key ?? ''); // Default to an empty string if key is null or undefined
-
-
-const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
-
+const model = createModel();
 export async function POST(req: NextRequest, res: NextResponse) {
   try {
     const {query } = await req.json()
