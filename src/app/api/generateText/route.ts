@@ -5,10 +5,11 @@ import { NextRequest, NextResponse } from "next/server";
 dotenv.config();
 
 import { GoogleGenerativeAI } from "@google/generative-ai";
-import { Console } from "console";
-const key: string = process.env.API_KEY;
 
-const genAI = new GoogleGenerativeAI(key);
+const key: string | undefined = process.env.API_KEY;
+
+const genAI = new GoogleGenerativeAI(key ?? ''); // Default to an empty string if key is null or undefined
+
 
 const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
 
