@@ -37,7 +37,10 @@ const QueryResolver: FC<QueryResolverProps> = (user, scroll) => {
   async function dataFetcher() {
     setQuery("");
     const promise = axios
-      .post("http://localhost:3000/api/generateText", { query })
+      .post(
+        "https://gen-slug-generative-ai.vercel.app/api/generateText",
+        { query }
+      )
       .then((response) => {
         const result = textWithBoldTags(response.data.result);
         setData((prevData) => [...prevData, { quer: query, response: result }]);
