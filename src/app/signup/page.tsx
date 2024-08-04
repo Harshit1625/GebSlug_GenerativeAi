@@ -40,7 +40,6 @@ const page: FC<pageProps> = ({}) => {
     resolver: yupResolver(schema),
   });
 
- 
   function onSubmit(data: FormData) {
     console.log(data);
     setOpen(true);
@@ -51,12 +50,12 @@ const page: FC<pageProps> = ({}) => {
     formData.append("password", data.password);
 
     axios
-      .post("http://localhost:3000/api/signup", formData)
+      .post("https://gen-slug-generative-ai.vercel.app/api/signup", formData)
       .then((response) => {
         console.log(response);
         toast.success("Submitted Succesfully");
         setOpen(false);
-        router.push('/')
+        router.push("/");
       })
       .catch((error) => {
         if (
