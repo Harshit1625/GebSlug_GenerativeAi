@@ -51,7 +51,7 @@ const page: FC<pageProps> = ({}) => {
 
   async function logOut() {
     axios.get(
-      "https://gen-slug-generative-ai.vercel.app/api/e-ai.vercel.app/api/logout"
+      "https://gen-slug-generative-ai.vercel.app/api/logout"
     );
     router.push("/login");
   }
