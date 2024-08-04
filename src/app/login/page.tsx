@@ -45,7 +45,10 @@ const page: FC<pageProps> = ({}) => {
     setOpen(true);
 
     axios
-      .post("https://gen-slug-generative-ai.vercel.app/api/login", formData)
+      .post(
+        "https://gen-slug-generative-nqkzavotf.vercel.app/api/login",
+        formData
+      )
       .then((res) => {
         toast.success("Logged in");
         router.push("/");

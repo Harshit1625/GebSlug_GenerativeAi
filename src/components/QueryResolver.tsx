@@ -38,7 +38,7 @@ const QueryResolver: FC<QueryResolverProps> = (user, scroll) => {
     setQuery("");
     const promise = axios
       .post(
-        "https://gen-slug-generative-ai.vercel.app/api/generateText",
+        "https://gen-slug-generative-nqkzavotf.vercel.app/api/generateText",
         { query }
       )
       .then((response) => {

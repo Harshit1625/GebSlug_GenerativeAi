@@ -51,7 +51,7 @@ const page: FC<pageProps> = ({}) => {
 
     axios
       .post(
-        "https://gen-slug-generative-ai.vercel.app/api/signup",
+        "https://gen-slug-generative-nqkzavotf.vercel.app/api/signup",
         formData
       )
       .then((response) => {

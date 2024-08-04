@@ -32,7 +32,7 @@ const page: FC<pageProps> = ({}) => {
 
   useEffect(() => {
     axios
-      .get("https://gen-slug-generative-ai.vercel.app/api/profile")
+      .get("https://gen-slug-generative-nqkzavotf.vercel.app/api/profile")
       .then((res) => {
         setUser({
           firstName: res.data.firstName,
@@ -50,7 +50,7 @@ const page: FC<pageProps> = ({}) => {
   }, []);
 
   async function logOut() {
-    axios.get("https://gen-slug-generative-ai.vercel.app/api/logout");
+    axios.get("https://gen-slug-generative-nqkzavotf.vercel.app/api/logout");
     router.push("/login");
   }
 
