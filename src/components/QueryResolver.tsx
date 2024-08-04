@@ -100,7 +100,7 @@ const QueryResolver: FC<QueryResolverProps> = (user, scroll) => {
 
       <div
         onKeyDown={handleKeyDown}
-        className="p-4 shadow-xl rounded-xl bg-white flex gap-4 fixed w-[80vw] sm:w-[70vw] md:w-[60vw] lg:w-1/2 top-[90vh]"
+        className="p-4 shadow-xl rounded-xl bg-white flex gap-4 fixed w-[80vw] sm:w-[70vw] md:w-[60vw] lg:w-1/2 lg:bottom-9 bottom-4"
       >
         <input
           placeholder="Enter your query please"
